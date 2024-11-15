@@ -1,19 +1,20 @@
 //
-//  ListCell.swift
+//  CategoryCell.swift
 //  Todoey
 //
-//  Created by Екатерина Орлова on 07.11.2024.
+//  Created by Екатерина Орлова on 14.11.2024.
 //
 
+import Foundation
 import UIKit
 
-class ListCell: UITableViewCell {
+class CategoryCell: UITableViewCell {
     
-    static let identifire = "ToDoItemCell"
+    static let identifire = "CategoryCell"
     
     var itemLabel: UILabel = {
         let label = UILabel()
-        label.text = "Find Mike"
+        label.text = "Food"
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20)
         label.numberOfLines = 0
@@ -39,12 +40,11 @@ class ListCell: UITableViewCell {
     
     func setupUI() {
         contentView.addSubview(itemLabel)
-        
-        
+
         NSLayoutConstraint.activate([
             itemLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             itemLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             itemLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            ])
+        ])
     }
 }
